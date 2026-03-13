@@ -1,0 +1,6 @@
+node_modules
+.nx
+.git
+.DS_Store
+**/.next
+**/dist

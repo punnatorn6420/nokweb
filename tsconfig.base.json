@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "paths": {
-      "shared-dtos": ["libs/shared-dtos/src/index.ts"]
+      "shared-dtos": ["libs/shared-dtos/src/index.ts"],
+      "@workspace/shared-ui": ["libs/shared-ui/src/index.ts"],
+      "@workspace/shared-ui/*": ["libs/shared-ui/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,3 +1,13 @@
+import {
+  Badge,
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  Input,
+} from '@workspace/shared-ui';
+
 const deals = [
   {
     route: 'Bangkok → Chiang Mai',
@@ -53,7 +63,8 @@ const offers = [
 const reasons = [
   {
     title: 'On-Time Performance',
-    description: 'Reliable schedules to keep your plans smooth and stress-free.',
+    description:
+      'Reliable schedules to keep your plans smooth and stress-free.',
     icon: '⏱️',
   },
   {
@@ -68,197 +79,296 @@ const reasons = [
   },
   {
     title: 'Friendly Service',
-    description: 'Warm Thai hospitality with professional care in every flight.',
+    description:
+      'Warm Thai hospitality with professional care in every flight.',
     icon: '🤝',
   },
 ];
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#f6f7f9] text-[#25292e]">
-      <section className="relative overflow-hidden px-4 pb-20 pt-6 sm:px-8 lg:px-14 lg:pb-24 lg:pt-10">
+    <main className="min-h-screen bg-slate-50 text-slate-900">
+      <section className="relative overflow-hidden border-b border-slate-200/70">
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(115deg, rgba(10, 27, 45, 0.84), rgba(10, 27, 45, 0.52)), url(https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=2000&q=80) center/cover',
+              'linear-gradient(115deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.45)), url(https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=2000&q=80) center/cover',
           }}
         />
-        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-start gap-10 pt-10 text-white lg:pt-16">
-          <div className="max-w-2xl space-y-4">
-            <p className="inline-flex rounded-full bg-white/15 px-4 py-1 text-sm font-medium tracking-wide backdrop-blur">
-              Nok Air · Smart Travel Across Thailand
-            </p>
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              Book your next journey with confidence.
-            </h1>
-            <p className="max-w-xl text-base text-white/90 sm:text-lg">
-              Discover seamless domestic travel with clean fares, flexible options,
-              and a smooth booking experience designed to get you flying faster.
-            </p>
-          </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+          <div className="grid items-end gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="max-w-2xl space-y-4 text-white">
+              <Badge className="rounded-full bg-white/15 px-3 py-1 text-white backdrop-blur-sm hover:bg-white/15">
+                Nok Air · Domestic Travel Made Simple
+              </Badge>
 
-          <div className="w-full max-w-5xl rounded-[20px] bg-white p-5 text-[#25292e] shadow-2xl shadow-black/25 sm:p-6 lg:p-7">
-            <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-              <h2 className="text-xl font-semibold">Find Flights</h2>
-              <label className="flex items-center gap-2 text-sm text-[#5b6168]">
-                <input type="checkbox" className="h-4 w-4 accent-[#FFD400]" />
-                One-way only
-              </label>
-            </div>
-
-            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-6">
-              <label className="lg:col-span-1">
-                <span className="mb-1 block text-sm text-[#5b6168]">From</span>
-                <input
-                  type="text"
-                  placeholder="Bangkok (DMK)"
-                  className="h-12 w-full rounded-xl border border-transparent bg-[#f2f4f7] px-4 text-sm outline-none transition focus:border-[#FFD400] focus:bg-white"
-                />
-              </label>
-              <label className="lg:col-span-1">
-                <span className="mb-1 block text-sm text-[#5b6168]">To</span>
-                <input
-                  type="text"
-                  placeholder="Chiang Mai (CNX)"
-                  className="h-12 w-full rounded-xl border border-transparent bg-[#f2f4f7] px-4 text-sm outline-none transition focus:border-[#FFD400] focus:bg-white"
-                />
-              </label>
-              <label className="lg:col-span-1">
-                <span className="mb-1 block text-sm text-[#5b6168]">Departure</span>
-                <input
-                  type="date"
-                  className="h-12 w-full rounded-xl border border-transparent bg-[#f2f4f7] px-4 text-sm outline-none transition focus:border-[#FFD400] focus:bg-white"
-                />
-              </label>
-              <label className="lg:col-span-1">
-                <span className="mb-1 block text-sm text-[#5b6168]">Return</span>
-                <input
-                  type="date"
-                  className="h-12 w-full rounded-xl border border-transparent bg-[#f2f4f7] px-4 text-sm outline-none transition focus:border-[#FFD400] focus:bg-white"
-                />
-              </label>
-              <label className="lg:col-span-1">
-                <span className="mb-1 block text-sm text-[#5b6168]">Passengers</span>
-                <select className="h-12 w-full rounded-xl border border-transparent bg-[#f2f4f7] px-4 text-sm outline-none transition focus:border-[#FFD400] focus:bg-white">
-                  <option>1 Adult</option>
-                  <option>2 Adults</option>
-                  <option>2 Adults, 1 Child</option>
-                  <option>Family (4)</option>
-                </select>
-              </label>
-              <div className="flex items-end lg:col-span-1">
-                <button className="h-12 w-full rounded-xl bg-[#FFD400] px-4 text-sm font-semibold text-[#25292e] transition hover:bg-[#f5cb00]">
-                  Search Flights
-                </button>
+              <div className="space-y-3">
+                <h1 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+                  Discover your next trip across Thailand
+                </h1>
+                <p className="max-w-xl text-sm leading-6 text-white/85 sm:text-base">
+                  Book with confidence through a cleaner, faster, and more
+                  modern experience designed for everyday travel.
+                </p>
               </div>
             </div>
+
+            <Card className="border-white/15 bg-white/95 shadow-2xl backdrop-blur">
+              <CardHeader className="space-y-1 pb-4">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <CardTitle className="text-lg font-semibold">
+                      Find Flights
+                    </CardTitle>
+                    <p className="text-sm text-slate-500">
+                      Search fares and routes quickly
+                    </p>
+                  </div>
+
+                  <label className="flex items-center gap-2 text-sm text-slate-600">
+                    <input
+                      type="checkbox"
+                      className="h-4 w-4 accent-[#FFD400]"
+                    />
+                    One-way
+                  </label>
+                </div>
+              </CardHeader>
+
+              <CardContent className="pt-0">
+                <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-6">
+                  <div className="space-y-1.5 xl:col-span-1">
+                    <label className="text-xs font-medium text-slate-600">
+                      From
+                    </label>
+                    <Input
+                      placeholder="Bangkok (DMK)"
+                      className="h-10 rounded-lg border-slate-200 bg-white"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5 xl:col-span-1">
+                    <label className="text-xs font-medium text-slate-600">
+                      To
+                    </label>
+                    <Input
+                      placeholder="Chiang Mai (CNX)"
+                      className="h-10 rounded-lg border-slate-200 bg-white"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5 xl:col-span-1">
+                    <label className="text-xs font-medium text-slate-600">
+                      Departure
+                    </label>
+                    <Input
+                      type="date"
+                      className="h-10 rounded-lg border-slate-200 bg-white"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5 xl:col-span-1">
+                    <label className="text-xs font-medium text-slate-600">
+                      Return
+                    </label>
+                    <Input
+                      type="date"
+                      className="h-10 rounded-lg border-slate-200 bg-white"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5 xl:col-span-1">
+                    <label className="text-xs font-medium text-slate-600">
+                      Passengers
+                    </label>
+                    <select className="h-10 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none transition focus:border-[#FFD400] focus:ring-2 focus:ring-[#FFD400]/20">
+                      <option>1 Adult</option>
+                      <option>2 Adults</option>
+                      <option>2 Adults, 1 Child</option>
+                      <option>Family (4)</option>
+                    </select>
+                  </div>
+
+                  <div className="flex items-end xl:col-span-1">
+                    <Button className="h-10 w-full rounded-lg bg-[#FFD400] font-medium text-slate-900 hover:bg-[#f5cb00]">
+                      Search
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-14 sm:px-8 lg:px-14 lg:pb-16">
-        <div className="mb-6 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-medium text-[#6c737b]">Best Fare Highlights</p>
-            <h2 className="text-2xl font-semibold sm:text-3xl">Top Flight Deals</h2>
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
+        <div className="mb-5 flex items-end justify-between gap-4">
+          <div className="space-y-1">
+            <p className="text-sm font-medium text-slate-500">
+              Best Fare Highlights
+            </p>
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              Top Flight Deals
+            </h2>
           </div>
-          <button className="rounded-xl bg-white px-4 py-2 text-sm font-medium text-[#25292e] shadow-sm">
+
+          <Button
+            variant="outline"
+            className="rounded-lg border-slate-200 bg-white text-slate-700"
+          >
             View all fares
-          </button>
+          </Button>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {deals.map((deal) => (
-            <article
+            <Card
               key={deal.route}
-              className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5"
+              className="overflow-hidden border-slate-200/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
             >
-              <div className="h-44 w-full bg-cover bg-center" style={{ backgroundImage: `url(${deal.image})` }} />
-              <div className="space-y-3 p-4">
-                <h3 className="text-base font-semibold">{deal.route}</h3>
-                <p className="text-3xl font-bold text-[#e1b800]">{deal.price}</p>
-                <p className="text-sm text-[#6c737b]">{deal.meta}</p>
-                <button className="w-full rounded-xl bg-[#FFD400] py-2.5 text-sm font-semibold text-[#25292e] transition hover:bg-[#f5cb00]">
+              <div
+                className="h-36 w-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${deal.image})` }}
+              />
+              <CardContent className="space-y-3 p-4">
+                <div className="space-y-1.5">
+                  <h3 className="line-clamp-2 text-base font-semibold leading-6">
+                    {deal.route}
+                  </h3>
+                  <p className="text-2xl font-bold tracking-tight text-[#d6a800]">
+                    {deal.price}
+                  </p>
+                  <p className="text-sm leading-5 text-slate-500">
+                    {deal.meta}
+                  </p>
+                </div>
+
+                <Button className="w-full rounded-lg bg-[#FFD400] text-slate-900 hover:bg-[#f5cb00]">
                   Book Now
-                </button>
-              </div>
-            </article>
+                </Button>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl space-y-14 px-4 pb-16 sm:px-8 lg:px-14 lg:pb-20">
-        <div>
-          <div className="mb-5 flex items-center justify-between">
-            <h2 className="text-2xl font-semibold sm:text-3xl">Special Offers</h2>
-            <div className="flex gap-2">
-              <button className="grid h-10 w-10 place-items-center rounded-full bg-white text-lg shadow-sm">←</button>
-              <button className="grid h-10 w-10 place-items-center rounded-full bg-white text-lg shadow-sm">→</button>
+      <section className="mx-auto max-w-7xl space-y-12 px-4 pb-12 sm:px-6 lg:px-8 lg:space-y-14 lg:pb-16">
+        <div className="space-y-5">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                Special Offers
+              </h2>
+              <p className="mt-1 text-sm text-slate-500">
+                Curated promotions and seasonal travel inspiration
+              </p>
+            </div>
+
+            <div className="hidden gap-2 sm:flex">
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-slate-200"
+              >
+                ←
+              </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-slate-200"
+              >
+                →
+              </Button>
             </div>
           </div>
-          <div className="grid gap-5 lg:grid-cols-3">
+
+          <div className="grid gap-4 lg:grid-cols-3">
             {offers.map((offer) => (
               <article
                 key={offer.title}
-                className="relative h-64 overflow-hidden rounded-[20px] bg-cover bg-center shadow-sm"
+                className="group relative h-56 overflow-hidden rounded-2xl border border-slate-200/70 bg-cover bg-center shadow-sm"
                 style={{ backgroundImage: `url(${offer.image})` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 p-5 text-white">
-                  <h3 className="text-xl font-semibold">{offer.title}</h3>
-                  <p className="mt-1 text-sm text-white/90">{offer.description}</p>
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/75 via-slate-900/15 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                  <h3 className="text-lg font-semibold">{offer.title}</h3>
+                  <p className="mt-1 text-sm leading-5 text-white/85">
+                    {offer.description}
+                  </p>
                 </div>
               </article>
             ))}
           </div>
         </div>
 
-        <div>
-          <h2 className="mb-6 text-2xl font-semibold sm:text-3xl">Why Fly Nok Air</h2>
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="space-y-5">
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              Why Fly Nok Air
+            </h2>
+            <p className="mt-1 text-sm text-slate-500">
+              Trusted service and practical comfort for domestic travel
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {reasons.map((reason) => (
-              <article
+              <Card
                 key={reason.title}
-                className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5"
+                className="border-slate-200/80 text-center shadow-sm"
               >
-                <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-[#fff6cc] text-2xl">
-                  {reason.icon}
-                </div>
-                <h3 className="text-lg font-semibold">{reason.title}</h3>
-                <p className="mt-2 text-sm text-[#6c737b]">{reason.description}</p>
-              </article>
+                <CardContent className="p-5">
+                  <div className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-[#fff7cc] text-xl">
+                    {reason.icon}
+                  </div>
+                  <h3 className="text-base font-semibold">{reason.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-500">
+                    {reason.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
 
-        <section className="relative overflow-hidden rounded-[24px] px-6 py-12 text-white sm:px-10 lg:px-14">
+        <Card className="relative overflow-hidden border-0 bg-transparent shadow-none">
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 rounded-3xl"
             style={{
               background:
-                'linear-gradient(135deg, rgba(15, 24, 35, 0.92), rgba(31, 41, 55, 0.75)), url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80) center/cover',
+                'linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(30, 41, 59, 0.74)), url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80) center/cover',
             }}
           />
-          <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-2xl space-y-2">
-              <p className="text-sm font-medium uppercase tracking-widest text-[#FFD400]">Nok Fan Club</p>
-              <h2 className="text-3xl font-semibold">Fly more, enjoy more privileges.</h2>
-              <p className="text-white/90">
-                Get exclusive fares, priority campaign access, and member-only travel
-                benefits every time you fly with Nok Air.
-              </p>
+          <CardContent className="relative rounded-3xl px-6 py-10 text-white sm:px-8 lg:px-10">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-2xl space-y-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FFD400]">
+                  Nok Fan Club
+                </p>
+                <h2 className="text-2xl font-semibold sm:text-3xl">
+                  Fly more, enjoy more privileges
+                </h2>
+                <p className="text-sm leading-6 text-white/85 sm:text-base">
+                  Get exclusive fares, priority campaign access, and member-only
+                  benefits every time you fly with Nok Air.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Button className="rounded-lg bg-[#FFD400] text-slate-900 hover:bg-[#f5cb00]">
+                  Join Nok Fan Club
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-lg border-white/25 bg-white/10 text-white hover:bg-white/20 hover:text-white"
+                >
+                  Learn More
+                </Button>
+              </div>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <button className="rounded-xl bg-[#FFD400] px-6 py-3 text-sm font-semibold text-[#25292e] transition hover:bg-[#f5cb00]">
-                Join Nok Fan Club
-              </button>
-              <button className="rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:bg-white/20">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
+          </CardContent>
+        </Card>
       </section>
     </main>
   );

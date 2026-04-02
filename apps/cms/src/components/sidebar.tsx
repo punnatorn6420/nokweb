@@ -26,7 +26,7 @@ function formatSectionTitle(sectionKey: string) {
 const nav: Array<NavLink | NavGroup> = [
   {
     title: 'Layout Manager',
-    href: '/layout-builder',
+    href: '/layout',
   },
   {
     title: 'CMS Sections',

@@ -21,6 +21,10 @@
                 "onlyDependOnLibsWithTags": ["scope:web", "scope:shared"]
               },
               {
+                "sourceTag": "scope:cms",
+                "onlyDependOnLibsWithTags": ["scope:cms", "scope:shared"]
+              },
+              {
                 "sourceTag": "scope:shared",
                 "onlyDependOnLibsWithTags": ["scope:shared"]
               }

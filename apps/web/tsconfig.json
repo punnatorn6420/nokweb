@@ -3,7 +3,6 @@
   "compilerOptions": {
     "jsx": "preserve",
     "ignoreDeprecations": "6.0",
-
     "strict": true,
     "noEmit": true,
     "emitDeclarationOnly": false,
@@ -12,23 +11,31 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
-    "plugins": [{ "name": "next" }]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-
     "./.next/types/**/*.ts",
     "../../dist/apps/web/.next/types/**/*.ts",
-
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "../../libs/shared-ui/src/**/*.ts",
+    "../../libs/shared-ui/src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",

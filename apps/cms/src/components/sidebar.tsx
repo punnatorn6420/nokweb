@@ -4,7 +4,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { ChevronDown } from 'lucide-react';
-import { cn } from '@workspace/shared-ui/lib/utils';
+import { cn } from '@design-system/shared-ui/lib/utils';
 
 export const HOME_SECTION_KEYS = [
   '1 Lorem ipsum dolor',

@@ -1,4 +1,4 @@
-import { SidebarProvider } from '@workspace/shared-ui/ui/sidebar';
+import { SidebarProvider } from '@design-system/shared-ui/ui/sidebar';
 import './global.css';
 import { ReactNode } from 'react';
 import { AppHeader } from '../components/header';

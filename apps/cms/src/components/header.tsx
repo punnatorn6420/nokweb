@@ -1,6 +1,6 @@
 'use client';
 
-import { SidebarTrigger } from '@workspace/shared-ui/ui/sidebar';
+import { SidebarTrigger } from '@design-system/shared-ui/ui/sidebar';
 import Image from 'next/image';
 
 export function AppHeader() {

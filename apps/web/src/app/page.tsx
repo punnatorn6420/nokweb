@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
   Input,
-} from '@workspace/shared-ui';
+} from '@design-system/shared-ui';
 
 const deals = [
   {
